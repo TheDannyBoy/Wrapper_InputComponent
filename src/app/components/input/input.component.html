@@ -1,0 +1,9 @@
+<div>
+  {{ label }}
+  <input
+    #input
+    type="text"
+    (blur)="onBlur($event)"
+    (focus)="onFocus($event)"
+    (keyup)="onKeyUp(this.input.value.length)">
+</div>

@@ -1,0 +1,8 @@
+<h2>Wrapper</h2>
+<div style="display: flex">
+  <app-input
+    (keyupEvent)="keyUp($event)"
+    label="Nombre">
+  </app-input>
+  <button (click)="click()" [disabled]="!buttonFlag">oK</button>
+</div>
