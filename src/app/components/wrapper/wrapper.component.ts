@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wrapper',
@@ -7,16 +7,11 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 })
 export class WrapperComponent implements OnInit {
   emitter: string;
-  buttonFlag = false;
+  @Input() buttonFlag: boolean;
 
   constructor() {}
 
   ngOnInit() {}
-
-  keyUp(value: string) {
-    console.log('keyUp - Wrapper', value, value.length);
-    this.buttonFlag = value.length > 9 ? true : false;
-  }
 
   click() {
     console.log('Button clicked!');

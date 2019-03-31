@@ -1,8 +1,5 @@
 <h2>Wrapper</h2>
 <div style="display: flex">
-  <app-input
-    (keyupEvent)="keyUp($event)"
-    label="Nombre">
-  </app-input>
+  <ng-content></ng-content>
   <button (click)="click()" [disabled]="!buttonFlag">oK</button>
 </div>

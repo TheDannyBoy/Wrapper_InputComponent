@@ -1,2 +1,7 @@
 <h1>Input Component</h1><br>
-<app-wrapper></app-wrapper>
+<app-wrapper [buttonFlag]="buttonDisabled">
+  <app-input
+    (keyupEvent)="keyUp($event)"
+    label="Nombre">
+  </app-input>
+</app-wrapper>
